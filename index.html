@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			margin:0px 0px;
+			background-color:#eee;
+			/*background-image: url(../../素材/海岸2.jpg);*/
+		
+
+		}
+		.header{
+			height: 105px;
+			background-image:url(11.jpg);
+			background-position: -300px -172px;
+			
+			padding-top: 1px;
+
+		}
+		.nav{
+			height: 26px;
+			list-style:none;
+			margin-top: 1px;
+		}
+		.nav li{
+			float:right;
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-left: 2.5px;
+			margin-right: 2.5px;
+			padding-bottom: 7px;
+			margin-top: 65px;
+			background: url(三色2.jpg);
+			border-top-left-radius:13px;
+			border-top-right-radius: 13px;
+			display: block;
+			transition:all 0.3s
+		}
+		.nav a li:hover{
+			background: url(三色2.jpg);
+			background-position: 0px -30px;
+			color: #ffffff;
+			transition:all 0.3s;
+			font-size:24px;
+
+		}
+
+	
+		
+		a{
+			text-decoration:none;/*点击前去链接下划线*/
+			color:#cec6c4;
+			font-size: 20px;
+		}
+		a:hover{
+			text-decoration: none;/*鼠标移动到上边时去掉下划线*/
+
+		}
+
+
+		.center{
+			display: inline-block;
+		    /*background-image: url(../../素材/海岸2.jpg);*/
+		    background-attachment: fixed;
+			width: 54%;
+			height:100%;
+			background-color:#e0eaef;
+			margin-top: 10px;
+			border-radius: 15px;
+			margin-left: 20px;
+
+		}
+
+		.text::before{
+			content:'';
+			position:absolute;
+			top:0px;
+			left:0px;
+			right:0px;
+			bottom:0px;
+			filter:blur(5px) contrast(0.8);
+			z-index:-1;
+		}
+	    /*.text::before{*/
+			/*background:url('../../素材/海岸2.jpg')  ;*/
+		}
+		.center .windows ul li{
+			float:right;
+			padding:0px 10px;
+		}
+		.diandian{
+			width: 20%;
+			margin:0px auto;
+		}
+	
+		.center .head{
+			margin-left: 25px;
+			float: left;
+			border-radius: 10px;
+		}
+		.center .text{
+			background-color: #e8eaef;
+			border-radius: 10px;
+			box-shadow:  5px 5px 5px rgba(0,0,0,.2);
+			padding-bottom: 20px;
+			padding-right: 70px;
+			margin-right: 15px;
+		}
+		.head:hover{
+			margin-top: -10px;
+			transform:all 0.8s; 
+		}
+		h2{
+			padding-top: 10px;
+		}
+		.side{
+			padding-left: 31px;
+			padding-bottom: 15px;
+		}
+		.photo a:hover{
+			width: 480px;
+			height:240px;
+		}
+		.city{
+			float: left;
+			height:100%;
+			background-color:red;
+			width: 20%;
+			margin-top: 10px;
+			border-radius: 15px;
+		}
+		div.city ul{
+			height: 0px;
+			overflow: hidden;
+			transition: all 0.3s ;
+		}
+		div.city .123 div:target ul{
+			height: 100px;
+		}
+		.right{
+            float:right;
+			margin-right: 100px;
+			background-color: green;
+			margin-top: 10px;
+   			
+		}
+		.search{
+			border: 3px solid #;
+		}
+
+		/*#tab1:target,#tab2:targer,#tab3:target{
+			list-style-type: circle;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="header">
+		<ul class="nav">
+			<a href=""><li>论坛</li></a>  <!--将a标签放外边是应为放在里边在动画时会有延时
+			                                background:url(三色.jpg);
+			                                background-position:0px -29px;
+			                                color:ffffff;
+			                                transition:all 0.3s-->
+			<a href=""><li>文章</li></a>
+			<a href=""><li>参考</li></a>
+			<a href=""><li>联系</li></a>
+			<a href=""><li>首页</li></a>
+		</ul>
+	</div>
+	<div class="city">
+		<div class="local" style="font-size: 50px; padding-left: 40px;
+		padding-top: 28px;">地区</div>
+		<div class="123">
+			<h4>点击</h4>
+			<ul style="list-style:none;">
+				<li>北京</li>
+				<li>上海</li>
+				<li>广州</li>
+				<li>深圳</li>
+			</ul>
+		</div>
+	</div>
+	<div class="center">
+		<div class="windows" style="height:350px;width: 750px; margin:0px auto; margin-top: 30px; padding-bottom: 30px; background-color: #33dd56; text-align: center;">
+				
+				<a href="#tab1"><div id="tab1" class="roll-photo" style="height: 30%; background-color: red;">1</div></a>
+				<a href="#tab2"><div id="tab2" class="roll-photo" style="height: 30%; background-color: purple;">2</div></a>
+				<a href="#tab3"><div id="tab3" class="roll-photo" style="height: 30%; background-color: black;">3</div></a>
+				<div class="diandian"> 
+					<ul>
+						<li id="tab1"></li>
+						<li id="tab2"></li>
+						<li id="tab3"></li>
+				  	</ul>
+				</div>
+				
+		</div>
+		<div class="content-1">
+			
+			<div class="head" style="background-image:url(../../素材/人物图标.png); width: 50px;height: 50px;transform:all 0.8s;  ">123
+			</div>
+			<div class="text" style=" margin-left: 85px; margin-top: 40px;
+			" >
+			    <div class="title" style="padding-left: 10px;">
+				    <h2>加速战斗的北京</h2>
+			    </div>
+			    <div class="introduce" style="text-indent:1em">
+			    		<div class="side">
+			    			在疫情的决胜关键时刻，北京丝毫没有半点松懈，继续前进，成为抗疫的带头大哥。国家的脊梁，人民的依靠
+			    		</div>
+			            <div class="photo">
+			    	         <a href=""><img src="../../素材/深圳演唱会2.jpg" style="width: 160px; height: 90px;"></a>
+			    	         <a href=""><img src="../../素材/Macbook.jpg" style="width: 160px; height: 90px;"></a>
+			            </div>
+			    </div>
+			</div>
+		</div>
+		<div class="content-2">
+			<div class="head" style="background-image:url(../../素材/人物图标.png); width: 50px;height: 50px; ">123
+			</div>
+			<div class="text" style=" margin-left: 85px; margin-top: 40px;
+			" >
+			    <div class="title" style="padding-left: 10px;">
+				    <h2>深圳演唱会《魅夜之光》</h2>
+				    <hr style="outline: 0px;">
+			    </div>
+			    <div class="introduce" style="text-indent:2em">
+			    		<div class="side">
+			    		繁星的夜空中，跨越时空的传送，让音乐贯穿时代，颤入人心!
+			    	    </div>
+			            <div class="photo">
+			    	         <a href=""><img src="../../素材/深圳演唱会2.jpg" style="width: 160px; height: 90px;"></a>
+			    	         <a href=""><img src="../../素材/Macbook.jpg" style="width: 160px; height: 90px;"></a>
+			            </div>
+			    </div>
+			</div>
+			
+		</div>
+		<div class="content-3">
+			<div class="head" style="background-image:url(../../素材/人物图标.png); width: 50px;height: 50px;">123
+			</div>
+			<div class="text" style=" margin-left: 85px; margin-top: 40px;
+			" >
+			    <div class="title" style="padding-left: 10px;">
+				    <h2>加速战斗的北京</h2>
+			    </div>
+			    <div class="introduce" style="text-indent:2em">
+			    		<div class="side">
+			    		在疫情的决胜关键时刻，北京丝毫没有半点松懈，继续前进，成为抗疫的带头大哥。国家的脊梁，人民的依靠
+			    	    </div>
+			            <div class="photo">
+			    	         <a href=""><img src="../../素材/深圳演唱会2.jpg" style="width: 160px; height: 90px;"></a>
+			    	         <a href=""><img src="../../素材/Macbook.jpg" style="width: 160px; height: 90px;"></a>
+			            </div>
+			    </div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="right">
+		<div class="search">
+			<input type="text" style="border:0px;outline: 0px; height: 23px;width: 80%;">
+			<button>搜索</button>
+			
+		</div>
+	</div>
+</body>
+</html>
