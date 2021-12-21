@@ -1,271 +1,463 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-		body{
-			margin:0px 0px;
-			background-color:#eee;
-			/*background-image: url(../../素材/海岸2.jpg);*/
-		
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <title>我的简历</title>
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+    <!-- 纸张大小 -->
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family:'Segoe UI',  cursive;
+        }
 
-		}
-		.header{
-			height: 105px;
-			background-image:url(11.jpg);
-			background-position: -300px -172px;
-			
-			padding-top: 1px;
+        ul,
+        li {
+            list-style: none;
+            padding: 8px 0;
+        
+        }
 
-		}
-		.nav{
-			height: 26px;
-			list-style:none;
-			margin-top: 1px;
-		}
-		.nav li{
-			float:right;
-			padding-left: 15px;
-			padding-right: 15px;
-			margin-left: 2.5px;
-			margin-right: 2.5px;
-			padding-bottom: 7px;
-			margin-top: 65px;
-			background: url(三色2.jpg);
-			border-top-left-radius:13px;
-			border-top-right-radius: 13px;
-			display: block;
-			transition:all 0.3s
-		}
-		.nav a li:hover{
-			background: url(三色2.jpg);
-			background-position: 0px -30px;
-			color: #ffffff;
-			transition:all 0.3s;
-			font-size:24px;
+        body {
+            background: #eee;
+            margin: 20px 0;
+        }
 
-		}
+        article {
+            /* 21cm,29.7cm是A4纸的标准尺寸 */
+            max-width: 21cm;
+            /* width: 15.27rem ;          */
+            min-height: 29.1cm
+                /* 1122/52 */
+            ;
+            background: white;
+            margin: 0 auto;
+            overflow: auto;
+            padding: 16px;
+        }
+    </style>
+    <!-- 文章基本样式 -->
+    <style>
+        article {
+            padding-top: 30px;
+        }
 
-	
-		
-		a{
-			text-decoration:none;/*点击前去链接下划线*/
-			color:#cec6c4;
-			font-size: 20px;
-		}
-		a:hover{
-			text-decoration: none;/*鼠标移动到上边时去掉下划线*/
+        p {
+            margin: 0 0 0.7em;
+    
+        }
 
-		}
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #336699;
+            margin-bottom: 7px;
+          
+        }
+
+        h4 {
+            margin: 0;
+            display: inline-block;
+            color: rgb(32, 32, 32);
+         
+        }
+
+        h2 {
+            margin: 0;
+            /* color: #99CC33; */
+            color:#333333;
+            background-color: rgb(163, 195, 3);
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        a {
+            color: #999;
+            text-decoration: none;
+            border-bottom: 1px solid
+        }
+
+        a:hover {
+            color: #555
+        }
+        header span {
+            display: flex;
+            align-items: end;
+        }
+        .baseColor {
+            color: #666
+        }
+        .second{
+         
+        }
+        .job ul {
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        strong {
+            color: #f60;
+        }
+
+        .project {
+            display: flex;
+            padding-top:15px ;
+        }
+
+        .project .description {
+            width: 11%;
+            text-align: right;
+        }
+
+        .project .content {
+            width: 90%;
+        }
+
+        .pro ol,
+        .job ol {
+            list-style-position: inside;
+            padding: 0;
+        }
+
+        .pro ol li {
+            margin-bottom: 20px;
+        }
+
+        .pro ol li header,
+        .job ol li header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pro ol li h4 {
+            display: inline-block;
+        }
+
+        .bio {
+            position: relative;
+        }
+
+        .bio img {
+            position: absolute;
+            top: -20px;
+            right: 0;
+        }
+
+        .skill ul {
+            margin:0 ;
+            padding: 0;
+
+        }
+
+        #p1 {
+            margin-left: 30px;
+        }
+
+        #main {
+            width: 600px;
+            height: 400px;
+        }
+        #tab{
+            background-color: rgb(175 175 175);
+            color: aliceblue;
+            padding:2px ;
+            border-radius: 5px;
+        }
+        .introduction div {
+            display: inline-block;
+            margin-right: 15px;
+    
+        }
+    </style>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .skill {
+            /* page-break-before: always; */
+
+        }
+    </style>
+    <!-- 移动端 -->
+    <style>
+        @media screen and (max-width:500px) {
+            article {
+                width: auto;
+                height: auto;
+            }
+
+            #main {
+                width: 370px;
+                height: 300px;
+            }
+
+            .introduction {
+                display: block;
+            }
+        }
+    </style>
 
 
-		.center{
-			display: inline-block;
-		    /*background-image: url(../../素材/海岸2.jpg);*/
-		    background-attachment: fixed;
-			width: 54%;
-			height:100%;
-			background-color:#e0eaef;
-			margin-top: 10px;
-			border-radius: 15px;
-			margin-left: 20px;
-
-		}
-
-		.text::before{
-			content:'';
-			position:absolute;
-			top:0px;
-			left:0px;
-			right:0px;
-			bottom:0px;
-			filter:blur(5px) contrast(0.8);
-			z-index:-1;
-		}
-	    /*.text::before{*/
-			/*background:url('../../素材/海岸2.jpg')  ;*/
-		}
-		.center .windows ul li{
-			float:right;
-			padding:0px 10px;
-		}
-		.diandian{
-			width: 20%;
-			margin:0px auto;
-		}
-	
-		.center .head{
-			margin-left: 25px;
-			float: left;
-			border-radius: 10px;
-		}
-		.center .text{
-			background-color: #e8eaef;
-			border-radius: 10px;
-			box-shadow:  5px 5px 5px rgba(0,0,0,.2);
-			padding-bottom: 20px;
-			padding-right: 70px;
-			margin-right: 15px;
-		}
-		.head:hover{
-			margin-top: -10px;
-			transform:all 0.8s; 
-		}
-		h2{
-			padding-top: 10px;
-		}
-		.side{
-			padding-left: 31px;
-			padding-bottom: 15px;
-		}
-		.photo a:hover{
-			width: 480px;
-			height:240px;
-		}
-		.city{
-			float: left;
-			height:100%;
-			background-color:red;
-			width: 20%;
-			margin-top: 10px;
-			border-radius: 15px;
-		}
-		div.city ul{
-			height: 0px;
-			overflow: hidden;
-			transition: all 0.3s ;
-		}
-		div.city .123 div:target ul{
-			height: 100px;
-		}
-		.right{
-            float:right;
-			margin-right: 100px;
-			background-color: green;
-			margin-top: 10px;
-   			
-		}
-		.search{
-			border: 3px solid #;
-		}
-
-		/*#tab1:target,#tab2:targer,#tab3:target{
-			list-style-type: circle;
-		}*/
-	</style>
 </head>
+
 <body>
-	<div class="header">
-		<ul class="nav">
-			<a href=""><li>论坛</li></a>  <!--将a标签放外边是应为放在里边在动画时会有延时
-			                                background:url(三色.jpg);
-			                                background-position:0px -29px;
-			                                color:ffffff;
-			                                transition:all 0.3s-->
-			<a href=""><li>文章</li></a>
-			<a href=""><li>参考</li></a>
-			<a href=""><li>联系</li></a>
-			<a href=""><li>首页</li></a>
-		</ul>
-	</div>
-	<div class="city">
-		<div class="local" style="font-size: 50px; padding-left: 40px;
-		padding-top: 28px;">地区</div>
-		<div class="123">
-			<h4>点击</h4>
-			<ul style="list-style:none;">
-				<li>北京</li>
-				<li>上海</li>
-				<li>广州</li>
-				<li>深圳</li>
-			</ul>
-		</div>
-	</div>
-	<div class="center">
-		<div class="windows" style="height:350px;width: 750px; margin:0px auto; margin-top: 30px; padding-bottom: 30px; background-color: #33dd56; text-align: center;">
-				
-				<a href="#tab1"><div id="tab1" class="roll-photo" style="height: 30%; background-color: red;">1</div></a>
-				<a href="#tab2"><div id="tab2" class="roll-photo" style="height: 30%; background-color: purple;">2</div></a>
-				<a href="#tab3"><div id="tab3" class="roll-photo" style="height: 30%; background-color: black;">3</div></a>
-				<div class="diandian"> 
-					<ul>
-						<li id="tab1"></li>
-						<li id="tab2"></li>
-						<li id="tab3"></li>
-				  	</ul>
-				</div>
-				
-		</div>
-		<div class="content-1">
-			
-			<div class="head" style="background-image:url(../../素材/人物图标.png); width: 50px;height: 50px;transform:all 0.8s;  ">123
-			</div>
-			<div class="text" style=" margin-left: 85px; margin-top: 40px;
-			" >
-			    <div class="title" style="padding-left: 10px;">
-				    <h2>加速战斗的北京</h2>
-			    </div>
-			    <div class="introduce" style="text-indent:1em">
-			    		<div class="side">
-			    			在疫情的决胜关键时刻，北京丝毫没有半点松懈，继续前进，成为抗疫的带头大哥。国家的脊梁，人民的依靠
-			    		</div>
-			            <div class="photo">
-			    	         <a href=""><img src="../../素材/深圳演唱会2.jpg" style="width: 160px; height: 90px;"></a>
-			    	         <a href=""><img src="../../素材/Macbook.jpg" style="width: 160px; height: 90px;"></a>
-			            </div>
-			    </div>
-			</div>
-		</div>
-		<div class="content-2">
-			<div class="head" style="background-image:url(../../素材/人物图标.png); width: 50px;height: 50px; ">123
-			</div>
-			<div class="text" style=" margin-left: 85px; margin-top: 40px;
-			" >
-			    <div class="title" style="padding-left: 10px;">
-				    <h2>深圳演唱会《魅夜之光》</h2>
-				    <hr style="outline: 0px;">
-			    </div>
-			    <div class="introduce" style="text-indent:2em">
-			    		<div class="side">
-			    		繁星的夜空中，跨越时空的传送，让音乐贯穿时代，颤入人心!
-			    	    </div>
-			            <div class="photo">
-			    	         <a href=""><img src="../../素材/深圳演唱会2.jpg" style="width: 160px; height: 90px;"></a>
-			    	         <a href=""><img src="../../素材/Macbook.jpg" style="width: 160px; height: 90px;"></a>
-			            </div>
-			    </div>
-			</div>
-			
-		</div>
-		<div class="content-3">
-			<div class="head" style="background-image:url(../../素材/人物图标.png); width: 50px;height: 50px;">123
-			</div>
-			<div class="text" style=" margin-left: 85px; margin-top: 40px;
-			" >
-			    <div class="title" style="padding-left: 10px;">
-				    <h2>加速战斗的北京</h2>
-			    </div>
-			    <div class="introduce" style="text-indent:2em">
-			    		<div class="side">
-			    		在疫情的决胜关键时刻，北京丝毫没有半点松懈，继续前进，成为抗疫的带头大哥。国家的脊梁，人民的依靠
-			    	    </div>
-			            <div class="photo">
-			    	         <a href=""><img src="../../素材/深圳演唱会2.jpg" style="width: 160px; height: 90px;"></a>
-			    	         <a href=""><img src="../../素材/Macbook.jpg" style="width: 160px; height: 90px;"></a>
-			            </div>
-			    </div>
-			</div>
-		</div>
+    <article>
+        <section class="bio">
+            <h1 style="font-size: 35px;">丁川</h1>
+            <img src="images/avatar.jpg" alt="头像" width="100px" height="100px">
+            <div class="second">
+                <p class="baseColor">
+                    男 &nbsp;| &nbsp;22岁 &nbsp;|&nbsp; 前端开发工程师 &nbsp;|&nbsp;&nbsp;郑州
+                </p>
+                <p>
+                <div class="introduction ">
+                    <div class="baseColor">手机: 13624735196</div>
+                    <div class="baseColor">微信: 13624735196</div>
+                    <div class="baseColor">邮箱: d582787497@163.com</div>
+                </div>
+                </p>
+            </div>
 
-	</div>
+        </section>
+        <section>
+            <h1>教育经历</h1>
+            <div class="second">
+                <p class="baseColor">
+                    <span><time>2017年</time>~<time>2021年</time></span>
+                    <span id="p1">郑州工商学院 </span><span id="p1">计算机科学与技术</span><span id="p1">本科</span><span id="p1">统招</span>
+                </p>
+            </div>
 
-	<div class="right">
-		<div class="search">
-			<input type="text" style="border:0px;outline: 0px; height: 23px;width: 80%;">
-			<button>搜索</button>
-			
-		</div>
-	</div>
+        </section>
+        <section class="skill">
+            <h1>技能介绍</h1>
+            <!-- <div id="main"></div> -->
+            <div class="second">
+                <ul class="baseColor">
+                    <li>熟练掌握<strong>HTML+CSS3</strong>静态页面制作以及<strong>scss</strong>，<strong>less</strong>预处理语言的使用，能将设计稿还原成页面。
+                    </li>
+                    <li>熟练掌握<strong>JQuery</strong>语法以及Ajax异步请求的原理和使用，能够使用插件快速开发网站。</li>
+                    <li>熟悉<strong>前后端分离</strong>，包括AJAX，跨域，Cookie，Seeion等。</li>
+                    <li>熟练使用vue前端框架和<strong>vue全家桶</strong></li>
+                    <li>熟悉ES5,ES6 包括let / const / <strong>Pormise</strong> / await /<strong>解构赋值等。</strong> </li>
+                    <li>熟练使用<strong>Git</strong>管理项目版本，<strong>npm</strong>，<strong>yarn </strong>管理相关的项目依赖包。</li>
+                    <li>了解node.js，express和webpack的配置和优化，掌握MySQL的基础语法及使用。</li>
+                    <li></li>
+                </ul>
+            </div>
+            
+        </section>
+        <section class="pro">
+            <h1>实践项目</h1>
+            <ol>
+                <li>
+                    <div class="second">
+                        <header>
+                            <h2>懂点啥资讯</h2>
+                            <span>
+                                <a href="#">源码链接</a>
+                            </span>
+                        </header>
+                        <div class="baseColor project">
+                            <div class="description">
+                                <h4>项目描述：</h4>
+                            </div>
+                            <div class="content">
+                                <p class="baseColor">
+                                    "懂点啥"是一款科技资讯类<strong>WebApp</strong>，项目功能包括用户文章展示、作者关注、点赞评论、内容推荐、频道管理、文章搜索等功能。系统采用<strong>前后端分离。</strong>的开发模式，前台主要使用了<strong>Vue</strong>等技术栈构建的SPA应用程序。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="baseColor project">
+                            <div class="description">
+                                <h4>技术栈：</h4>
+                            </div>
+                            <div class="content">
+                                <p class="baseColor"><span id='tab'>Vue</span>   、<span id='tab'>Vue-Router</span>、<span id='tab'>Vuex</span>、<span id='tab'>Axios</span>、<span id='tab'>Vue-Cli</span>、<span id='tab'>Vant</span></p>
+                            </div>
+                        </div>
+                        <div class="baseColor project">
+                            <div class="description">
+                                <h4>项目职责：</h4>
+                            </div>
+                            <div class="content">
+                                <p class="baseColor">使用Vue开发框架，并使用<strong>Vant</strong>组件库快速搭建页面。</p>
+                                <p class="baseColor">使用flexible+rem进行移动端适配，再使用<strong>postcss-pxtorem</strong>处理单位转换。</p>
+                                <p class="baseColor"><strong>封装Axios</strong>，配置基础请求信息，通过二次封装后用await进行处理。</p>
+                                <p class="baseColor">登录模块，表单验证，token过期处理以及<strong>持久化</strong>处理。</p>
+                                <p class="baseColor">首页文章<strong>下拉刷新</strong>，<strong>触底懒加载</strong>等。</p>
+                                <p class="baseColor">首页的<strong>频道切换</strong>，<strong>频道编辑</strong>，<strong>频道高亮</strong>。</p>
+                                <p class="baseColor">搜索框<strong>防抖</strong>，<strong>节流</strong>优化，联想建议关键字高亮操作。</p>
+                                <p class="baseColor">使用day.js对文章时间进行格式化处理。</p>
+                                <p class="baseColor">实现文章的<strong>渲染</strong>，<strong>点赞</strong>，<strong>关注</strong>，<strong>收藏</strong>，<strong>回复</strong>。</p>
+                                
+                            </div>
+                        </div>
+                        <div class="baseColor project">
+                            <div class="description">
+                                <h4>问题处理：</h4>
+                            </div>
+                            <div class="content">
+                                <p class="baseColor">用户在使用手机号短信验证码登录的时候，无法收到验证码，后台收到为 1014 的错误，并且上传图片时，打开本地文件卡顿，慢，而且不同浏览器的响应速度不同。</p>
+                                
+                            </div>
+                        </div>
+                        <div class="baseColor project">
+                            <div class="description">
+                                <h4>解决方案：</h4>
+                            </div>
+                            <div class="content">
+                                <p class="baseColor">查阅腾讯云的后台文档发现，若模板中设置了多个变量值，则发送短信时也应该传入多个变量进行发送。通过排查修改type解决问题。</p>
+                                <p class="baseColor">卡顿原因经过测试发现，safari、Firefox、Chrome 都在MAC中没有卡顿，在 windows里面只有 Chrome 卡顿。因为 Chrome、SafeBrowsing 功能会在上传或保存时检查文件，经过再次调试后成功解决卡顿问题。</p>
+                                <p class="baseColor"></p>
+                                <p class="baseColor"></p>
+                                <p class="baseColor"></p>
+                                
+                            </div>
+                        </div>
+                    </div>    
+                </li>
+                <li>
+                    <header>
+                        <h2>内部部门管理平台</h2>
+                        <span>
+                            <a href="#">源码链接</a>
+                            <a href="#">源码链接</a>
+                        </span>
+
+                    </header>
+                    <div class="baseColor project">
+                        <div class="description">
+                            <h4>项目描述：</h4>
+                        </div>
+                        <div class="content">
+                            <p class="baseColor">
+                               该项目是为了更加方便，高效的管理部门信息而开发的一款Vue后台管理系统，采用前后端分离开发。该系统实现了管理各级部门、管理员工信息、管理员工档案、绩效考核、工资管理等等功能模块。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="baseColor project">
+                        <div class="description">
+                            <h4>技术栈：</h4>
+                        </div>
+                        <div class="content">
+                            <p class="baseColor">
+                               该项目是为了更加方便，高效的管理部门信息而开发的一款Vue后台管理系统，采用前后端分离开发。该系统实现了管理各级部门、管理员工信息、管理员工档案、绩效考核、工资管理等等功能模块。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="baseColor project">
+                        <div class="description">
+                            <h4>问题处理：</h4>
+                        </div>
+                        <div class="content">
+                            <p class="baseColor">
+                               该项目是为了更加方便，高效的管理部门信息而开发的一款Vue后台管理系统，采用前后端分离开发。该系统实现了管理各级部门、管理员工信息、管理员工档案、绩效考核、工资管理等等功能模块。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="baseColor project">
+                        <div class="description">
+                            <h4>解决方案：</h4>
+                        </div>
+                        <div class="content">
+                            <p class="baseColor">
+                               该项目是为了更加方便，高效的管理部门信息而开发的一款Vue后台管理系统，采用前后端分离开发。该系统实现了管理各级部门、管理员工信息、管理员工档案、绩效考核、工资管理等等功能模块。
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <header>
+                        <h2>文章管理后台项目</h2>
+                        <span>
+                            <a href="#">项目预览</a>
+                        </span>
+                    </header>
+                    <h4>项目描述:</h4>
+                    <p class="baseColor">该项目是为了方便管理人员能够更加方便的管理平台文章而设计的。采用了轻便的nodejs编写</p>
+                </li>
+            </ol>
+        </section>
+        <section class="job">
+            <h1>工作经历</h1>
+            <ol>
+                <li>
+                    <header>
+                        <h4>河南中普国鼎科技有限公司</h4>
+                        <span><time>2020年7月</time>~<time>2020年9月年</time></span>
+                    </header>
+                    <ul class="baseColor">
+                        <li>
+                            负责团队基础开发，独立编辑前端页面内容
+                        </li>
+                        <li>
+                            负责全部门UI框架的开发，包括对话框，树形组件，日期选择等常用组件
+                        </li>
+                        <li>
+                            为前端能力较弱的同时进行培训，提高其工作效率
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <header>
+                        <h4>待定</h4>
+                        <span><time>2018年7月</time>~<time>2018年9月年</time></span>
+                    </header>
+                    <ul class="baseColor">
+                        <li>
+                            内容待定
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <!-- <h2>其他链接</h2>
+            <a href="https://gitee.com/HUAWEI_Space" class="baseColor">gitee</a>
+            <a href="#" class="baseColor">掘金</a> -->
+        </section>
+
+    </article>
+    <!-- <script id='flex' src="./lib/js/flexible.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.6.0/echarts.min.js"></script>
+    <script>
+        // based on prepared DOM, initialize echarts instance
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // specify chart configuration item and data
+        var option = {
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    data: [120, 200, 150, 80, 70, 110, 130],
+                    type: 'bar',
+                    showBackground: true,
+                    backgroundStyle: {
+                        color: 'rgba(180, 180, 180, 0.2)'
+                    }
+                }
+            ]
+        };
+
+        // use configuration item and data specified to show chart
+        myChart.setOption(option);
+    </script>
+    <!-- <script src="./js/flex.js"></script> -->
 </body>
+
 </html>
